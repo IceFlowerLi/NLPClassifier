@@ -6,26 +6,34 @@ class Word:
     def __init__(self, datapath=None, min_freq=1,
                  islower=True, fine_tune=True):
         self.vocab = collections.OrderedDict()
+        self.label = collections.OrderedDict()
         self.islower = islower
         self.min_freq = min_freq
         self.cwpath = os.getcwd()
         self.dtpath = self.cwpath + '/data/' if not datapath else datapath
         self.datafile = os.listdir(self.dtpath)
         self.fine_tune = fine_tune
+        self.sentence_maxlen = 0
 
     def __word_process(self, sentence):
         if self.islower:
-            for idx, word in enumerate(sentence):
-                    sentence[idx] = word.lower()
-        return sentence
+            if type(sentence) == list:
+                for idx, word in enumerate(sentence):
+                        sentence[idx] = word.lower()
 
-    def __add_word(self, sentence):
-        for word in sentence:
-            if word not in self.vocab:
-                self.vocab[word] = 1
+    def __add_word(self, sentence, aim):
+        if type(sentence) == list:
+            for word in sentence:
+                if word not in aim:
+                    aim[word] = 1
+                else:
+                    aim[word] += 1
+                # print(word, self.vocab[word])
+        else:
+            if sentence not in aim:
+                aim[sentence] = 1
             else:
-                self.vocab[word] += 1
-            # print(word, self.vocab[word])
+                aim[sentence] += 1
 
     def __read_word(self, file=None):
         if not file:
@@ -45,23 +53,29 @@ class Word:
         for name in file:
             with open(self.dtpath + name, 'r') as f:
                 for idx, line in enumerate(f):
-                    content = line.split(' ||| ')
+                    content = line.rstrip().split(' ||| ')
                     sentence = content[0].split()
-                    label = content[1].split()
+                    if len(sentence) > self.sentence_maxlen:
+                        self.sentence_maxlen = len(sentence)
+                    label = content[1]
                     self.__word_process(sentence)
-                    self.__add_word(sentence)
+                    self.__add_word(sentence, self.vocab)
+                    self.__word_process(label)
+                    self.__add_word(label, self.label)
 
-    def __order_dict(self):
-        sequence = sorted(self.vocab.items(),
+    def __order_dict(self, aim):
+        sequence = sorted(aim.items(),
                           key=lambda x: x[1], reverse=True)
         new_dict = collections.OrderedDict()
         for item in sequence:
             new_dict[item[0]] = item[1]
-        self.vocab = new_dict
+        aim.clear()
+        aim.update(new_dict)
 
     def build_dict(self, file=None):
         self.__read_word(file)
-        self.__order_dict()
+        self.__order_dict(self.vocab)
+        self.__order_dict(self.label)
 
 
 class WordTable:
@@ -106,20 +120,22 @@ if __name__ == '__main__':
     print(table.traintable)
     print('aaa')
     '''
-    word = Word(islower=False)
+    word = Word(islower=True)
     word.build_dict()
 
-#    for i in word.vocab:
-#        print(i, word.vocab[i])
+    for i in word.label:
+        print(i, word.label[i])
 
 #    print(type(word.vocab))
 #    print(word.vocab[','])
 
-    table = WordTable(word.vocab)
-    table.build_table()
+#    table = WordTable(word.vocab)
+#    table.build_table()
+#
+#    for i in table.itos:
+#        print("{0}: {1}".format(i, table.itos[i]))
 
-    for i in table.itos:
-        print("{0}: {1}".format(i, table.itos[i]))
+#    print(word.sentence_maxlen)
 
 
 
