@@ -2,7 +2,7 @@ import os
 import collections
 
 
-class Word:
+class Word(object):
     def __init__(self, datapath=None, min_freq=1,
                  islower=True, fine_tune=True):
         self.vocab = collections.OrderedDict()
@@ -14,6 +14,7 @@ class Word:
         self.datafile = os.listdir(self.dtpath)
         self.fine_tune = fine_tune
         self.sentence_maxlen = 0
+        self.sentence_label = collections.OrderedDict()
 
     def __word_process(self, sentence):
         if self.islower:
@@ -58,6 +59,7 @@ class Word:
                     if len(sentence) > self.sentence_maxlen:
                         self.sentence_maxlen = len(sentence)
                     label = content[1]
+                    self.sentence_label.update({idx: content})
                     self.__word_process(sentence)
                     self.__add_word(sentence, self.vocab)
                     self.__word_process(label)
@@ -78,7 +80,7 @@ class Word:
         self.__order_dict(self.label)
 
 
-class WordTable:
+class WordTable(object):
 
     def __init__(self, vocab=None):
         self.pad_str = '<pad>'
@@ -112,6 +114,18 @@ class WordTable:
     def build_table(self):
         self.__build_itos()
         self.__build_stoi()
+
+    def load_word2id(self, word):
+        if word in self.stoi:
+            return self.stoi[word]
+        else:
+            return self.unk_idx
+
+    def load_label2id(self, label):
+        if label in self.stoi:
+            return self.stoi[label]
+        else:
+            return self.unk_idx
 
 
 if __name__ == '__main__':
