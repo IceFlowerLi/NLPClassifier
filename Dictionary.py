@@ -109,7 +109,12 @@ class WordTable(object):
     def __build_stoi(self):
         self.stoi.update({self.pad_str: self.pad_idx})
         self.stoi.update({self.unk_str: self.unk_idx})
-        self.stoi.update(self.table)
+        # self.stoi.update(self.table)
+        #   This sentence lead to the difference of stoi and itos!!!
+        for idx, item in enumerate(self.table):
+            self.stoi.update(
+                {item: idx + 2}
+            )
 
     def build_table(self):
         self.__build_itos()
@@ -137,21 +142,16 @@ if __name__ == '__main__':
     word = Word(islower=True)
     word.build_dict()
 
-    for i in word.label:
-        print(i, word.label[i])
+#    for i in word.label:
+#        print(i, word.label[i])
 
 #    print(type(word.vocab))
 #    print(word.vocab[','])
 
-#    table = WordTable(word.vocab)
-#    table.build_table()
-#
-#    for i in table.itos:
-#        print("{0}: {1}".format(i, table.itos[i]))
+    table = WordTable(word.vocab)
+    table.build_table()
 
+    for i, j in zip(table.stoi, table.itos):
+        print('%10s %20s %20s %20s' % (i, table.stoi[i], j, table.itos[j]))
 #    print(word.sentence_maxlen)
-
-
-
-
 
