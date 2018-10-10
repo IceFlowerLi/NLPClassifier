@@ -82,7 +82,7 @@ class Word(object):
 
 class WordTable(object):
 
-    def __init__(self, vocab=None):
+    def __init__(self, vocab=None, max_len=None):
         self.pad_str = '<pad>'
         self.pad_idx = 0
         self.unk_str = '<unk>'
@@ -93,6 +93,8 @@ class WordTable(object):
             raise Exception('The dictionary is empty!')
         else:
             self.table = vocab
+        self.stc_maxlen = max_len
+
 
     def __build_itos(self):
         self.itos.update(
@@ -127,10 +129,16 @@ class WordTable(object):
             return self.unk_idx
 
     def load_label2id(self, label):
-        if label in self.stoi:
-            return self.stoi[label]
-        else:
-            return self.unk_idx
+        #if label in self.stoi:
+        #    return self.stoi[label]
+        #else:
+        #    return self.unk_idx
+
+        label_dict = {'0': 0, '1': 1}
+        try:
+            return label_dict[label]
+        except KeyError as e:
+            return 2
 
 
 if __name__ == '__main__':
@@ -148,7 +156,7 @@ if __name__ == '__main__':
 #    print(type(word.vocab))
 #    print(word.vocab[','])
 
-    table = WordTable(word.vocab)
+    table = WordTable(word.vocab, word.sentence_maxlen)
     table.build_table()
 
     for i, j in zip(table.stoi, table.itos):
