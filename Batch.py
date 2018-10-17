@@ -4,9 +4,6 @@ import torch
 
 from Dictionary import *
 
-random.seed(0)
-torch.manual_seed(0)
-
 
 class BatchFeature(object):
 
@@ -27,7 +24,11 @@ class Iterator(BatchFeature):
 
         self.batch = batch
 
-        assert batch_len < len(data), "ERROR! Batch size over the data length!"
+        """
+        for item in data:
+            stc_num = len(item['data'])
+            assert batch_len < stc_num, "ERROR! Batch size over the data length!"
+        """
         self.batch_len = batch_len
 
         self.data = [data] if type(data) != list else data
@@ -41,13 +42,12 @@ class Iterator(BatchFeature):
         :return:        None now.
         """
         # line = inst.sentence_label
-        line = inst
         wordid = []
         labelid = []
 
-        for item in line:
-            label = line[item][1]
-            sentence = line[item][0].split()
+        for item in inst['data']:
+            label = item['label']
+            sentence = item['example']
             per_stc = []
 
             for idx, word in enumerate(sentence):
@@ -63,32 +63,48 @@ class Iterator(BatchFeature):
 
         return wordid, labelid
 
-    def create_perbatch(self, inst, vocab):
+    def create_perbatch(self, inst, vocab, i):
         perbatch_word = []
         perbatch_label = []
-
+        #perbatch_data = []
         word_vct, label_vct = self._word_id(inst, vocab)
 
-        for group in range(len(word_vct) // self.batch_len + 1):
+        current_len = self.batch_len[i]
+        if current_len == len(label_vct) or not len(label_vct) % current_len:
+            index = len(word_vct) // current_len
+        else:
+            index = len(word_vct) // current_len + 1
 
-            start, end = group * self.batch_len, (group + 1) * self.batch_len
+        for group in range(index):
 
-            if end < len(word_vct):
-                perbatch_word.append(word_vct[start:end])
-                perbatch_label.append(label_vct[start:end])
-            else:
-                supply_word = []
-                supply_label = []
-                extra = end - len(word_vct)
+            start, end = group * current_len, (group + 1) * current_len
 
-                for i in range(extra):
-                    supply_word.append(
-                        [vocab.pad_idx for i in range(self.batch.sentence_maxlen)]
-                    )
-                    supply_label.append(vocab.load_label2id('Unkown'))
+            perbatch_word.append(word_vct[start:end])
+            perbatch_label.append(label_vct[start:end])
 
-                perbatch_word.append(word_vct[start:] + supply_word)
-                perbatch_label.append(label_vct[start:] + supply_label)
+        #for word, label in zip(perbatch_word, perbatch_label):
+        #    perbatch_data.append([word, label])
+
+        print("aa")
+
+        """
+        if end < len(word_vct):
+            perbatch_word.append(word_vct[start:end])
+            perbatch_label.append(label_vct[start:end])
+        else:
+            supply_word = []
+            supply_label = []
+            extra = end - len(word_vct)
+
+            for i in range(extra):
+                supply_word.append(
+                    [vocab.pad_idx]
+                )
+                supply_label.append(vocab.load_label2id('Unkown'))
+
+            perbatch_word.append(word_vct[start:] + supply_word)
+            perbatch_label.append(label_vct[start:] + supply_label)
+        """
 
         return perbatch_word, perbatch_label
 
@@ -112,8 +128,8 @@ class Iterator(BatchFeature):
 
         data_iter = []
         label_iter = []
-        for sgl_data in self.data:
-            dt_it, lb_it = self.create_perbatch(sgl_data, self.vocab)
+        for i, sgl_data in enumerate(self.data):
+            dt_it, lb_it = self.create_perbatch(sgl_data, self.vocab, i)
             data_iter.append(dt_it)
             label_iter.append(lb_it)
 
@@ -121,14 +137,17 @@ class Iterator(BatchFeature):
 
 
 if __name__ == '__main__':
-    word = Word(islower=True)
+    file = LoadData()
+    file.form_data()
+
+    word = Word(data=file.all_file, islower=True)
     word.build_dict()
 
-    table = WordTable(word.vocab, word.sentence_maxlen)
+    table = WordTable(word.vocab)
     table.build_table()
 
-    batch_iter = Iterator(batch=word, batch_len=500,
-                          data=word.sentence_label, vocab=table)
+    batch_iter = Iterator(batch_len=500,
+                          data=file.all_file, vocab=table)
     data_iter, label_iter = batch_iter.create_iter()
     print('')
 

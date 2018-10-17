@@ -21,12 +21,14 @@ def train(train_iter, test_iter, dev_iter, model, args):
     steps = 0
     best_acc = 0
     last_step = 0
-    model.train()
     for epoch in range(1, args.epochs + 1):
         print("Current epoch:", epoch)
-        for batch in train_iter:
-            feature, target = batch.text, batch.label
-            feature.data.t_(), target.data.sub_(1)  # batch first, index align
+        #import random
+        #random.shuffle(per_data)
+        for feature, target in zip(train_iter[0], train_iter[1]):
+            perbatch_size = len(feature)
+            feature, target = supply_blank(feature, target)
+            # feature.data.t_(), target.data.sub_(1)  # batch first, index align
             if args.cuda:
                 feature, target = feature.cuda(), target.cuda()
 
@@ -45,13 +47,13 @@ def train(train_iter, test_iter, dev_iter, model, args):
             steps += 1
             if steps % args.log_interval == 0:
                 corrects = (torch.max(logit, 1)[1].view(target.size()).data == target.data).sum()
-                accuracy = 100.0 * float(corrects) / batch.batch_size
+                accuracy = 100.0 * float(corrects) / perbatch_size
                 sys.stdout.write(
                     '\rBatch[{}] - loss: {:.6f}  acc: {:.4f}%({}/{})'.format(steps,
                                                                              loss.data[0],
                                                                              accuracy,
                                                                              corrects,
-                                                                             batch.batch_size))
+                                                                             perbatch_size))
             if steps % args.test_interval == 0:
                 dev_acc = eval(dev_iter, model, args)
                 test_acc = eval(test_iter, model, args)
@@ -82,9 +84,9 @@ def train(train_iter, test_iter, dev_iter, model, args):
 def eval(data_iter, model, args):
     model.eval()
     corrects, avg_loss = 0, 0
-    for batch in data_iter:
-        feature, target = batch.text, batch.label
-        feature.data.t_(), target.data.sub_(1)  # batch first, index align
+    for feature, target in zip(data_iter[0], data_iter[1]):
+        # feature.data.t_(), target.data.sub_(1)  # batch first, index align
+        feature, target = supply_blank(feature, target)
         if args.cuda:
             feature, target = feature.cuda(), target.cuda()
 
@@ -95,7 +97,11 @@ def eval(data_iter, model, args):
         corrects += (torch.max(logit, 1)
                      [1].view(target.size()).data == target.data).sum()
 
-    size = len(data_iter.dataset)
+    iter_len = 0
+    for item in data_iter[1]:
+        iter_len += len(item)
+
+    size = iter_len
     avg_loss /= size
     accuracy = 100.0 * float(corrects) / size
     print('\nEvaluation - loss: {:.6f}  acc: {:.4f}%({}/{}) \n'.format(avg_loss,
@@ -138,3 +144,24 @@ def save_param(save_dir, accuracy, args):
         for attr, value in args.__dict__.items():
             f.write('%-15s = %-s\n' % (attr, value))
         f.write('\nAccuracy\t\t\t{}%'.format(accuracy))
+
+
+def supply_blank(sentences, label):
+    row = len(sentences)
+    max_col = 0
+
+    for item in sentences:
+        col_len = len(item)
+        if col_len > max_col:
+            max_col = col_len
+
+    equ_stc = []
+    for item in sentences:
+        per_stc = item + [0 for i in range(max_col - len(item))]
+        equ_stc.append(per_stc)
+
+    stc_tensor = torch.tensor(equ_stc, dtype=torch.long)
+    label_tensor = torch.tensor(label, dtype= torch.long)
+
+    return stc_tensor, label_tensor
+

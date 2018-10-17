@@ -1,20 +1,58 @@
 import os
 import collections
+import random
+
+random.seed(210)
+
+
+class LoadData(object):
+
+    def __new__(cls, *args, **kwargs):
+        if not hasattr(cls, '__instance'):
+            cls.__instance = super(LoadData, cls).__new__(cls, *args, **kwargs)
+        return cls.__instance
+
+    def __init__(self):
+        self.islower = True
+        self.fine_tune = True
+        self.shuffle = True
+        self.all_file = []
+
+        self.cwpath = os.getcwd()
+        self.dtpath = self.cwpath + '/data/'
+        self.file_name = os.listdir(self.dtpath)
+
+    def form_data(self):
+
+        for name in self.file_name:
+            with open(self.dtpath + name, 'r') as f:
+                per_file = []
+                for idx, line in enumerate(f):
+                    content = line.rstrip().split(' ||| ')
+                    sentence = content[0].split()
+                    label = content[1]
+                    per_file.append(
+                        {'example': sentence, 'label': label}
+                    )
+
+            if self.shuffle:
+                random.shuffle(per_file)
+
+            self.all_file.append({'name': name, 'data': per_file})
 
 
 class Word(object):
-    def __init__(self, datapath=None, min_freq=1,
+    def __init__(self, data=None, min_freq=1,
                  islower=True, fine_tune=True):
+        self.data = data
         self.vocab = collections.OrderedDict()
         self.label = collections.OrderedDict()
         self.islower = islower
         self.min_freq = min_freq
-        self.cwpath = os.getcwd()
-        self.dtpath = self.cwpath + '/data/' if not datapath else datapath
-        self.datafile = os.listdir(self.dtpath)
         self.fine_tune = fine_tune
         self.sentence_maxlen = 0
-        self.sentence_label = collections.OrderedDict()
+        self.vocab_num = 0
+        self.label_num = 0
 
     def __word_process(self, sentence):
         if self.islower:
@@ -36,34 +74,34 @@ class Word(object):
             else:
                 aim[sentence] += 1
 
-    def __read_word(self, file=None):
-        if not file:
-            file = self.datafile
+    def __read_word(self):
+
         '''
         if isinstance(file, str):
             print('Your input data file is ', file)
         else:
             raise Exception('Input the right data file!')
         '''
+
+        '''
         if len(file) == 0:
             raise Exception("Data file is blank! " +
                             "Add the dataset in data file!")
-        if not self.fine_tune:
-            file = [self.dtpath + 'train2.txt']
+        '''
+        if self.fine_tune:
+            self.data = [self.data[1]]        # Select the train data to build vocabulary.
 
-        for name in file:
-            with open(self.dtpath + name, 'r') as f:
-                for idx, line in enumerate(f):
-                    content = line.rstrip().split(' ||| ')
-                    sentence = content[0].split()
-                    if len(sentence) > self.sentence_maxlen:
-                        self.sentence_maxlen = len(sentence)
-                    label = content[1]
-                    self.sentence_label.update({idx: content})
-                    self.__word_process(sentence)
-                    self.__add_word(sentence, self.vocab)
-                    self.__word_process(label)
-                    self.__add_word(label, self.label)
+        for per_file in self.data:
+            content = per_file['data']
+            for item in content:
+                sentence = item['example']
+                if len(sentence) > self.sentence_maxlen:
+                    self.sentence_maxlen = len(sentence)
+                label = item['label']
+                self.__word_process(sentence)
+                self.__add_word(sentence, self.vocab)
+                self.__word_process(label)
+                self.__add_word(label, self.label)
 
     def __order_dict(self, aim):
         sequence = sorted(aim.items(),
@@ -74,10 +112,16 @@ class Word(object):
         aim.clear()
         aim.update(new_dict)
 
-    def build_dict(self, file=None):
-        self.__read_word(file)
+    def build_dict(self):
+        self.__read_word()
+
         self.__order_dict(self.vocab)
+        self.vocab_num = len(self.vocab)
+
         self.__order_dict(self.label)
+        self.label_num = len(self.label)
+
+        print('Different vocabulary and label are collected.')
 
 
 class WordTable(object):
@@ -121,6 +165,7 @@ class WordTable(object):
     def build_table(self):
         self.__build_itos()
         self.__build_stoi()
+        print('Word table is built.')
 
     def load_word2id(self, word):
         if word in self.stoi:
@@ -147,19 +192,28 @@ if __name__ == '__main__':
     print(table.traintable)
     print('aaa')
     '''
+
+    '''
     word = Word(islower=True)
     word.build_dict()
-
-#    for i in word.label:
-#        print(i, word.label[i])
-
-#    print(type(word.vocab))
-#    print(word.vocab[','])
 
     table = WordTable(word.vocab, word.sentence_maxlen)
     table.build_table()
 
     for i, j in zip(table.stoi, table.itos):
         print('%10s %20s %20s %20s' % (i, table.stoi[i], j, table.itos[j]))
-#    print(word.sentence_maxlen)
+    '''
+
+    file = LoadData()
+    file.form_data()
+
+    word = Word(data=file.all_file, islower=True)
+    word.build_dict()
+
+    tabel = WordTable(word.vocab)
+    tabel.build_table()
+    print('999')
+
+
+
 

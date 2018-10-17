@@ -17,7 +17,7 @@ class CNN_Text(nn.Module):
         Co = args.kernel_num
         Ks = args.kernel_sizes
 
-        self.embed = nn.Embedding(V, D, max_norm=10, padding_idx=1)
+        self.embed = nn.Embedding(V, D, max_norm=10, padding_idx=0)
 
         if args.pretrain_embedding:
             idx_dict = self.idxtowrds(args.itos)

@@ -3,12 +3,14 @@ import argparse
 import datetime
 import torch
 import torchtext.data as data
-import Model
-import Train
-import Batch
 
 import numpy as np
 import random
+
+import Model
+import Train
+import Batch
+import Dictionary
 
 parser = argparse.ArgumentParser(description='CNN text classificer')
 # learning
@@ -26,7 +28,7 @@ parser.add_argument('-early-stop', type=int, default=1000,
 parser.add_argument('-save-best', type=bool, default=True, help='whether to save when get best performance')
 # data
 parser.add_argument('-shuffle', action='store_true', default=True, help='shuffle the data every epoch')
-parser.add_argument('-pretrain-embedding', action='store_true', default=True, help='load the pretrained embedding.')
+parser.add_argument('-pretrain-embedding', action='store_true', default=False, help='load the pretrained embedding.')
 # model
 parser.add_argument('-dropout', type=float, default=0.3, help='the probability for dropout [default: 0.5]')
 parser.add_argument('-l2', type=float, default=1e-8, help='l2 regularization method. [default: 0]')
@@ -87,17 +89,34 @@ torch.manual_seed(210)
 
 # load data
 print("\nLoading data...")
-text_field = data.Field(lower=True)
-label_field = data.Field(sequential=False)
+#text_field = data.Field(lower=True)
+#label_field = data.Field(sequential=False)
 # train_iter, dev_iter = mr(text_field, label_field, device=-1, repeat=False)
-train_iter, dev_iter, test_iter = sst(text_field, label_field, device=-1, repeat=False, shuffle=True, sort=False)
+#train_iter, dev_iter, test_iter = sst(text_field, label_field, device=-1, repeat=False, shuffle=True, sort=False)
+file = Dictionary.LoadData()
+file.form_data()
+
+word = Dictionary.Word(data=file.all_file, fine_tune=True)
+word.build_dict()
+
+table = Dictionary.WordTable(vocab=word.vocab)
+table.build_table()
+args.itos = table.itos
+
+batch_iter = Batch.Iterator(batch_len=(50, args.batch_size,
+                                       len(file.all_file[2]['data'])),
+                            data=file.all_file, vocab=table)
+data_iter, label_iter = batch_iter.create_iter()
+test_iter, train_iter, dev_iter = zip(data_iter, label_iter)
 
 # update args and print
-args.embed_num = len(text_field.vocab)
-args.class_num = len(label_field.vocab) - 1
+args.embed_num = word.vocab_num + 2
+args.class_num = word.label_num
 args.cuda = (not args.no_cuda) and torch.cuda.is_available(); del args.no_cuda
 args.kernel_sizes = [int(k) for k in args.kernel_sizes.split(',')]
 args.save_dir = os.path.join(args.save_dir, datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S'))
+if not os.path.isdir(args.save_dir):
+    os.makedirs(args.save_dir)
 
 print("\nParameters:")
 for attr, value in sorted(args.__dict__.items()):
