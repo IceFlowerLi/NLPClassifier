@@ -2,7 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="324230f4-ab4f-478e-a4b5-6de9be51314f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Dictionary.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-15_19-07-01/parameters.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-15_19-19-25/parameters.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-15_19-21-59/parameters.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-15_19-26-12/parameters.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-15_19-27-12/parameters.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-15_19-30-14/parameters.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-15_19-32-24/parameters.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-15_19-39-16/parameters.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_08-28-07/best_steps_100.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_08-45-41/best_steps_100.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_08-52-02/best_steps_100.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_09-09-09/best_steps_100.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_09-12-30/best_steps_100.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_09-16-31/best_steps_100.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_14-36-42/parameters.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_14-47-18/best_steps_100.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_14-47-18/best_steps_200.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_14-47-18/parameters.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_15-02-54/best_steps_100.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_15-02-54/best_steps_1000.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_15-02-54/best_steps_1200.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_15-02-54/best_steps_1300.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_15-02-54/best_steps_200.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_15-02-54/best_steps_300.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_15-02-54/best_steps_500.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_15-02-54/best_steps_700.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_15-02-54/parameters.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_15-11-40/best_steps_100.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_15-11-40/best_steps_200.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_15-11-40/parameters.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_15-15-32/best_steps_100.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_15-15-32/best_steps_200.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_15-15-32/parameters.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_15-20-26/best_steps_100.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_15-20-26/best_steps_1000.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_15-20-26/best_steps_1300.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_15-20-26/best_steps_200.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_15-20-26/best_steps_300.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_15-20-26/best_steps_500.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_15-20-26/best_steps_700.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_15-20-26/best_steps_800.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_15-20-26/best_steps_900.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-16_15-20-26/parameters.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-17_21-16-07/best_steps_100.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-17_21-16-07/best_steps_200.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/snapshot/2018-10-17_21-16-07/parameters.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Batch.py" beforeDir="false" afterPath="$PROJECT_DIR$/Batch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dictionary.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dictionary.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Train.py" beforeDir="false" afterPath="$PROJECT_DIR$/Train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test2" beforeDir="false" afterPath="$PROJECT_DIR$/data/test2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train2" beforeDir="false" afterPath="$PROJECT_DIR$/data/train2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/val2" beforeDir="false" afterPath="$PROJECT_DIR$/data/val2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,41 +65,58 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/WordTable$Dictionary.coverage" NAME="Dictionary Coverage Results" MODIFIED="1537164990971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/WordTable$Dictionary.coverage" NAME="Dictionary Coverage Results" MODIFIED="1539571211287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/WordTable$Batch.coverage" NAME="Batch Coverage Results" MODIFIED="1539565475797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/WordTable$main.coverage" NAME="main Coverage Results" MODIFIED="1539782163270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1443484342">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
-          <entry key="project.open.time.11" value="3" />
+          <entry key="project.closed" value="22" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.11" value="6" />
+          <entry key="project.open.time.12" value="7" />
+          <entry key="project.open.time.13" value="2" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="3" />
-          <entry key="test2" value="1" />
+          <entry key="py" value="36" />
+          <entry key="test2" value="5" />
+          <entry key="train" value="1" />
+          <entry key="train2" value="5" />
+          <entry key="val2" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="3" />
+          <entry key="PLAIN_TEXT" value="14" />
+          <entry key="Python" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Python Console" value="8" />
-          <entry key="py" value="16916" />
+          <entry key="Python Console" value="1036" />
+          <entry key="py" value="60903" />
+          <entry key="test2" value="3" />
+          <entry key="train2" value="7" />
+          <entry key="txt" value="13" />
+          <entry key="val2" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="16924" />
+          <entry key="PLAIN_TEXT" value="26" />
+          <entry key="Python" value="61939" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -54,17 +125,72 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dictionary.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="126" selection-start-line="126" selection-end-line="126" />
+            <state relative-caret-position="1188">
+              <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <marker date="1537274543243" expanded="true" signature="42:2120" ph="..." />
-                <marker date="1537274543243" expanded="true" signature="876:881" ph="..." />
-                <marker date="1537274543243" expanded="true" signature="2529:2813" ph="..." />
-                <marker date="1537274543243" expanded="true" signature="2836:2845" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Batch.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="84" column="8" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+                <marker date="1539782160258" expanded="true" signature="1733:3549" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/test2">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="65484">
+              <caret line="1819" selection-start-line="1819" selection-end-line="1819" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2988">
+              <caret line="95" column="13" selection-start-line="95" selection-start-column="13" selection-end-line="95" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Train.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+                <marker date="1539782130757" expanded="true" signature="5465:5470" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2268">
+              <caret line="66" column="36" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -85,7 +211,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/data/train2" />
+        <option value="$PROJECT_DIR$/data/val2" />
+        <option value="$PROJECT_DIR$/data/test2" />
+        <option value="$PROJECT_DIR$/Model.py" />
         <option value="$PROJECT_DIR$/Dictionary.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/Train.py" />
+        <option value="$PROJECT_DIR$/Batch.py" />
       </list>
     </option>
   </component>
@@ -123,9 +256,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../NLPclassification/cnn-text-classification-pytorch" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -138,6 +278,66 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="Batch" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="WordTable" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Batch.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="WordTable" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.Dictionary" />
+      <item itemvalue="Python.Batch" />
+      <item itemvalue="Python.main" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.Batch" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",SHOW_INHERITED" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -152,34 +352,70 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-11" width="1922" height="1092" extended-state="6" />
+    <frame x="0" y="-6" width="1920" height="1086" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17868675" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49945945" weight="0.18406889" />
+      <window_info id="Structure" order="1" sideWeight="0.50054055" side_tool="true" weight="0.28848225" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32972974" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.76216215" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32972974" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="2" sideWeight="0.4994618" weight="0.32972974" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.39783785" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.5989189" />
+      <window_info anchor="bottom" id="Debug" order="6" sideWeight="0.49892357" weight="0.4454054" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.32972974" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32972974" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5010764" side_tool="true" weight="0.7643243" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.5448649" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="13" visible="true" weight="0.5989189" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32992464" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -187,35 +423,261 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Batch.py</url>
+          <line>150</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Batch.py</url>
+          <line>151</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Batch.py</url>
+          <line>148</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Batch.py</url>
+          <line>104</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Dictionary.py</url>
-          <line>81</line>
-          <option name="timeStamp" value="3" />
+          <line>210</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Dictionary.py</url>
+          <line>212</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Dictionary.py</url>
+          <line>213</line>
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Dictionary.py</url>
-          <line>84</line>
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/Train.py</url>
+          <line>88</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Train.py</url>
+          <line>99</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Train.py</url>
+          <line>103</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Train.py</url>
+          <line>78</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Train.py</url>
+          <line>57</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>146</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>105</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>109</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>96</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>99</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>102</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Batch.py</url>
+          <line>87</line>
+          <option name="timeStamp" value="81" />
         </line-breakpoint>
       </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="per_stc" />
+        <watch expression="sentence" />
+        <watch expression="vocab.stoi" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="setValue">
+      <expression>
+        <expression-string>tensor([[  2,  12,   5,  13,   6,  14,   2,  15,  16,   3,  17,   7,
+          18,   8,  19,   9,  20,   3,  21,   6,  22,  10,  23,  24,
+          25,  26,  27,  28,  29,  30,  31,  32,  33,  34,  35,  11]])</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>len(vocab.stoi)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>target[0]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>target</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>vocab.stoi['rock']</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>__py_debug_temp_var_612165922</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>len(self.vocab.table)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>len(word.vocab)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>print(stc_tensor)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>len(word_vct)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/test2">
+    <entry file="file:///usr/local/lib/python3.5/dist-packages/torch/nn/functional.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-14472" />
+        <state relative-caret-position="174">
+          <caret line="1329" selection-start-line="1329" selection-end-line="1329" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/train" />
+    <entry file="file:///usr/lib/python3/dist-packages/apport_python_hook.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/val2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="622">
+          <caret line="870" selection-start-line="870" selection-end-line="870" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/train2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247896">
+          <caret line="6919" column="24" selection-start-line="6919" selection-start-column="24" selection-end-line="6919" selection-end-column="24" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Dictionary.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="126" selection-start-line="126" selection-end-line="126" />
+        <state relative-caret-position="1188">
+          <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1537274543243" expanded="true" signature="42:2120" ph="..." />
-            <marker date="1537274543243" expanded="true" signature="876:881" ph="..." />
-            <marker date="1537274543243" expanded="true" signature="2529:2813" ph="..." />
-            <marker date="1537274543243" expanded="true" signature="2836:2845" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65484">
+          <caret line="1819" selection-start-line="1819" selection-end-line="1819" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2988">
+          <caret line="95" column="13" selection-start-line="95" selection-start-column="13" selection-end-line="95" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2268">
+          <caret line="66" column="36" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1539782130757" expanded="true" signature="5465:5470" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Batch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="84" column="8" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1539782160258" expanded="true" signature="1733:3549" ph="..." />
           </folding>
         </state>
       </provider>
